@@ -1,0 +1,71 @@
+body {
+    font-size: 100;
+    height: 500px;
+    background: black;
+  }
+  
+  container {
+    display: grid;
+    height: 100%;  
+  
+      grid-template-areas: 
+          "topbar	topbar	topbar"
+          "sidebar 	content	ads"
+      "footer	footer	footer";
+    
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 25% 55% 25%;
+    gap: 50px;
+    align-content: center;
+    text-align: center;
+    margin: 100px 45px;
+    color: white;
+  }
+  
+  header 	{ grid-area: topbar; }
+  aside 	{ grid-area: sidebar; }
+  article { grid-area: content; }
+  nav 	  { grid-area: ads; }
+  footer 	{ grid-area: footer; }
+  
+  header, aside, article, ads, footer {
+    display: grid;
+    place-items: center;
+  }
+  
+  header {
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+  
+  article {
+    width: 100%;
+    height: 100%;  
+    background: rgb(119, 52, 163);
+    background: linear-gradient(90deg, rgb(125, 51, 173) 0%, rgb(240, 25, 25) 50%, rgb(238, 166, 66) 100%);
+  }
+  
+  nav {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 66, 4);
+    background: linear-gradient(90deg, rgb(1, 41, 2) 0%, rgb(0, 90, 3) 23%, rgb(10, 129, 20) 61%, rgb(35, 255, 6) 100%);
+  }
+  
+  aside {
+    width: 100%;
+    height: 100%;
+    background: rgb(32, 179, 182);
+    background: linear-gradient(0deg, rgb(33, 178, 180) 0%, rgb(233, 169, 32) 100%);
+  }
+  
+  footer {
+    width: 100%;
+    height: 100%;
+    background: rgb(219, 155, 183);
+    background: radial-gradient(circle, rgb(192, 132, 158) 0%, rgb(111, 151, 197) 100%);
+  }
